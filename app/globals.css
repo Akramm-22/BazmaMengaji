@@ -1,0 +1,203 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-geist-sans), 'Geist Fallback';
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #fafbfc;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #007979;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f4f4;
+  --secondary-foreground: #007979;
+  --muted: #f0f0f0;
+  --muted-foreground: #666666;
+  --accent: #00a8a8;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --border: #e5e7eb;
+  --input: #f3f4f6;
+  --ring: #007979;
+  --chart-1: #007979;
+  --chart-2: #00a8a8;
+  --chart-3: #e8f4f4;
+  --chart-4: #f0f0f0;
+  --chart-5: #d1d5db;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #007979;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8f4f4;
+  --sidebar-accent-foreground: #007979;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #007979;
+}
+
+.dark {
+  --background: #0f0f0f;
+  --foreground: #f5f5f5;
+  --card: #1a1a1a;
+  --card-foreground: #f5f5f5;
+  --popover: #1a1a1a;
+  --popover-foreground: #f5f5f5;
+  --primary: #00a8a8;
+  --primary-foreground: #0f0f0f;
+  --secondary: #005757;
+  --secondary-foreground: #f5f5f5;
+  --muted: #2a2a2a;
+  --muted-foreground: #999999;
+  --accent: #00d4d4;
+  --accent-foreground: #0f0f0f;
+  --destructive: #ef4444;
+  --border: #2a2a2a;
+  --input: #2a2a2a;
+  --ring: #00a8a8;
+  --chart-1: #00a8a8;
+  --chart-2: #007979;
+  --chart-3: #005757;
+  --chart-4: #1a1a1a;
+  --chart-5: #2a2a2a;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #00a8a8;
+  --sidebar-primary-foreground: #0f0f0f;
+  --sidebar-accent: #005757;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: #2a2a2a;
+  --sidebar-ring: #00a8a8;
+}
+
+:root {
+  --islamic-grid-color: rgba(0, 121, 121, 0.025);
+  --islamic-glow: radial-gradient(circle at 50% 150px, rgba(0, 168, 168, 0.05) 0%, transparent 75%);
+}
+
+.dark {
+  --islamic-grid-color: rgba(0, 168, 168, 0.035);
+  --dark-navbar-mask: #0f0f0f;
+  --islamic-glow: radial-gradient(circle at 50% 150px, rgba(0, 87, 87, 0.15) 0%, transparent 75%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  /* DI SINI PERBAIKANNYA: Body sekarang bersih tanpa gangguan gambar/pola bawaan */
+  body {
+    @apply bg-background text-foreground relative min-h-screen;
+    background-image: none;
+  }
+
+  html {
+    @apply font-sans;
+  }
+}
+
+/* KELAS BARU: Dipisah agar bisa dipanggil hanya di section yang Anda inginkan */
+.bg-islamic-pattern {
+  background-image: 
+    linear-gradient(to bottom, var(--background) 0px, var(--background) 80px, transparent 81px),
+    var(--islamic-glow),
+    linear-gradient(30deg, var(--islamic-grid-color) 12%, transparent 12.5%, transparent 87%, var(--islamic-grid-color) 87.5%, var(--islamic-grid-color)),
+    linear-gradient(150deg, var(--islamic-grid-color) 12%, transparent 12.5%, transparent 87%, var(--islamic-grid-color) 87.5%, var(--islamic-grid-color)),
+    linear-gradient(30deg, var(--islamic-grid-color) 60%, transparent 60.5%, transparent 100%),
+    linear-gradient(150deg, var(--islamic-grid-color) 60%, transparent 60.5%, transparent 100%),
+    linear-gradient(90deg, var(--islamic-grid-color) 12%, transparent 12.5%, transparent 87%, var(--islamic-grid-color) 87.5%, var(--islamic-grid-color));
+  background-size: 100% 100%, 100% 100%, 60px 104px, 60px 104px, 60px 104px, 60px 104px, 60px 104px;
+  background-position: top center, center top, 0 0, 0 0, 30px 52px, 30px 52px, 0 0;
+  background-repeat: no-repeat, no-repeat, repeat, repeat, repeat, repeat, repeat;
+}
+
+.navbar-clean {
+  @apply sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border/40 transition-all duration-200;
+}
+
+.islamic-section-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.islamic-section-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 80% 20%, var(--background) 0%, transparent 60%);
+  opacity: 0.6;
+}
+
+.islamic-section-bg::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+  z-index: 0;
+  pointer-events: none;
+  background-image: conic-gradient(from 36deg at 50% 50%, var(--primary) 0deg, transparent 36deg, transparent 72deg, var(--accent) 72deg, transparent 108deg, transparent 360deg);
+  opacity: 0.03;
+  mask-image: radial-gradient(circle, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 70%);
+}
+
+.dark .islamic-section-bg::after {
+  opacity: 0.06;
+}
+
+.islamic-section-bg > * {
+  position: relative;
+  z-index: 1;
+}
