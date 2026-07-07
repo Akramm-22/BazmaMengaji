@@ -8,7 +8,7 @@ export function About() {
     {
       icon: Heart,
       title: 'Niat & Komitmen',
-      description: 'Kami berkomitmen membantu setiap santri menghafal dan memahami Al-Quran dengan tulus.',
+      description: 'Kami berkomitmen membantu setiap peserta menghafal dan memahami Al-Quran dengan tulus.',
     },
     {
       icon: Target,
@@ -31,26 +31,26 @@ export function About() {
     {
       program: 'Pra Tahsin',
       metode: 'Metode Tilawati',
-      keterangan: "Diperuntukkan bagi santri yang belum mampu membaca Al-Qur'an. Mengenal huruf hijaiyah, harakat, dan huruf sambung hingga siap masuk Tahsin.",
-      teknis: 'Online via Zoom',
+      keterangan: "Diperuntukkan bagi peserta yang belum mampu membaca Al-Qur'an. Mengenal huruf hijaiyah, harakat, dan huruf sambung hingga siap masuk Tahsin.",
+      teknis: 'Online & Offline',
     },
     {
       program: 'Tahsin',
       metode: 'Metode Tilawati',
       keterangan: 'Memperbaiki dan menyempurnakan bacaan sesuai makharijul huruf dan kaidah tajwid hingga membaca dengan tartil.',
-      teknis: 'Online via Zoom',
+      teknis: 'Online & Offline',
     },
     {
       program: 'Tahfidz',
       metode: 'Mumtaza',
-      keterangan: "Pendampingan hafalan Al-Qur'an secara terstruktur memanfaatkan Al-Qur'an tikrar dan pendekatan khusus.",
-      teknis: 'Online via Zoom',
+      keterangan: "Pendampingan hafalan Al-Qur'an secara terstruktur memanfaatkan Al-Qur'an tikrar dan pendekatan khusus untuk menjaga kualitas hafalan.",
+      teknis: 'Online & Offline',
     },
     {
-      program: 'Tartil & Tajwid',
+      program: 'Tilawah',
       metode: 'Naghom Islamiyyah',
-      keterangan: 'Menyempurnakan teknik membaca dengan tartil dan penerapan hukum tajwid yang sempurna serta irama Al-Qur\'an.',
-      teknis: 'Online via Zoom',
+      keterangan: 'Membiasakan interaksi harian serta menyempurnakan teknik membaca dengan irama Al-Qur\'an yang indah dan harmonis.',
+      teknis: 'Online & Offline',
     },
   ]
 
@@ -87,10 +87,10 @@ export function About() {
             Visi & Misi
           </span>
           <h2 className="text-3xl font-bold text-foreground md:text-4xl tracking-tight">
-            Arah Pendidikan Al-Quran BAZMA Mengaji
+            Arah Gerakan BAZMA Mengaji
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground">
-            Menjaga kualitas pendidikan, membentuk karakter Islami, dan memastikan pembelajaran Al-Quran tetap hidup sepanjang waktu.
+            Ikhtiar bersama untuk melahirkan masyarakat yang bertumbuh, mencintai, dan menjadikan Al-Qur'an sebagai kompas kehidupan.
           </p>
         </motion.div>
 
@@ -106,20 +106,19 @@ export function About() {
               </div>
               <h3 className="text-xl font-bold text-foreground">Visi Kami</h3>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                Menjadi lembaga pendidikan Al-Quran yang menghadirkan pembelajaran berkualitas, membangun karakter Islami, dan menumbuhkan semangat belajar yang berkelanjutan sepanjang kehidupan.
+                Menjadi gerakan pembelajaran Al-Qur'an yang melahirkan generasi dan masyarakat yang cinta, dekat, serta bertumbuh bersama Al-Qur'an sepanjang hayat.
               </p>
             </div>
           </motion.div>
 
           {/* List Misi */}
-          <motion.div variants={itemVariants} className="lg:col-span-3 grid gap-3 sm:grid-cols-2">
+          <motion.div variants={itemVariants} className="lg:col-span-3 grid gap-3 sm:grid-cols-1">
             {[
-              'Membantu santri mempelajari Al-Quran dengan kaidah yang benar.',
-              'Membangun karakter Islami yang kokoh dan berakhlakul karimah.',
-              'Menjadikan pembelajaran Al-Quran menarik dan mudah diakses.',
-              'Memanfaatkan metode pengajaran yang efektif dan modern.',
-              'Menumbuhkan kecintaan jangka panjang terhadap kitab suci Al-Quran.',
-              'Mendorong praktik nyata dalam kehidupan sehari-hari sesuai ajaran.',
+              'Memudahkan akses belajar Al-Qur\'an bagi seluruh kalangan melalui pembelajaran yang terstruktur dan berkualitas.',
+              'Meningkatkan kemampuan membaca Al-Qur\'an melalui program Pra Tahsin dan Tahsin.',
+              'Menumbuhkan budaya menghafal dan menjaga Al-Qur\'an melalui program Tahfidz.',
+              'Membiasakan interaksi harian dengan Al-Qur\'an melalui program Tilawah.',
+              'Menanamkan nilai-nilai Al-Qur\'an sebagai pedoman dalam kehidupan pribadi, keluarga, dan masyarakat.',
             ].map((misi, idx) => (
               <div
                 key={idx}
@@ -158,18 +157,30 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <h3 className="text-lg font-bold text-foreground mb-2">Sejarah Singkat</h3>
+            <h3 className="text-lg font-bold text-foreground mb-2">Gerakan Pembelajaran</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              BAZMA Mengaji didirikan pada tahun 2015 dengan visi untuk menyediakan pendidikan Al-Quran yang berkualitas, terjangkau, dan mudah diakses bagi seluruh lapisan masyarakat modern.
+              BAZMA Mengaji hadir untuk memudahkan masyarakat dalam belajar, membaca, memperbaiki bacaan, menghafal, dan membiasakan interaksi dengan Al-Qur'an.
             </p>
           </motion.div>
 
-          {/* Timeline Alur Minimalis */}
+          {/* Timeline Deskripsi Gerakan */}
           <div className="md:col-span-2 relative pl-6 border-l border-border space-y-8 ml-2 md:ml-0">
             {[
-              { year: '2015', title: 'Awal Pendirian', desc: 'BAZMA Mengaji resmi didirikan, berkomitmen menghadirkan bimbingan Al-Quran terjangkau dengan mutu tinggi.' },
-              { year: 'Sejak Awal', title: 'Inovasi Kurikulum', desc: 'Fokus mengembangkan metode pembelajaran yang efisien, adaptif, dan disesuaikan bagi santri segala usia.' },
-              { year: 'Hingga Saat Ini', title: 'Ribuan Alumni Santri', desc: 'Telah dipercaya membantu ribuan santri menguasai bacaan Al-Quran secara tartil, fasih, dan memahami hukum tajwid sempurna.' }
+              { 
+                tag: 'Inklusif', 
+                title: 'Terbuka untuk Semua Kalangan', 
+                desc: 'Memanfaatkan teknologi dan sistem terstruktur, kami membuka kesempatan bagi setiap muslim untuk belajar sesuai kemampuan dan kebutuhannya, tanpa dibatasi usia, profesi, maupun latar belakang pendidikan.' 
+              },
+              { 
+                tag: 'Lebih Dari Belajar', 
+                title: 'Ikhtiar Menumbuhkan Cinta', 
+                desc: 'Bukan sekadar program belajar, ini adalah ikhtiar konkrit menghadirkan Al-Qur\'an lebih dekat dalam kehidupan sehari-hari demi menumbuhkan kecintaan yang mendalam terhadap kitab suci.' 
+              },
+              { 
+                tag: 'Tujuan Akhir', 
+                title: 'Al-Qur\'an Sebagai Pedoman Hidup', 
+                desc: 'Melalui program berkala, kami berkomitmen mendampingi setiap peserta agar Al-Qur\'an tidak hanya menjadi bacaan yang dilafalkan, melainkan pedoman utama yang mengarahkan cara berpikir, bersikap, dan menjalani kehidupan.' 
+              }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -181,7 +192,7 @@ export function About() {
               >
                 {/* Bulat Ring Glow */}
                 <span className="absolute -left-[30px] top-1.5 h-3 w-3 rounded-full bg-primary ring-4 ring-primary/10 border border-background shadow-inner" />
-                <span className="text-[10px] font-bold text-primary tracking-wider uppercase bg-primary/10 px-2 py-0.5 rounded">{item.year}</span>
+                <span className="text-[10px] font-bold text-primary tracking-wider uppercase bg-primary/10 px-2 py-0.5 rounded">{item.tag}</span>
                 <h4 className="text-sm font-semibold text-foreground">{item.title}</h4>
                 <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               </motion.div>
@@ -239,7 +250,7 @@ export function About() {
           </div>
           <h3 className="text-2xl font-bold text-foreground md:text-3xl tracking-tight">Program & Metodologi Belajar</h3>
           <p className="mx-auto max-w-xl text-sm text-muted-foreground">
-            Kurikulum berjenjang terstruktur yang disesuaikan dengan kapasitas pemahaman dasar santri.
+            Kurikulum berjenjang terstruktur yang disesuaikan dengan kapasitas pemahaman dasar setiap peserta.
           </p>
         </motion.div>
 

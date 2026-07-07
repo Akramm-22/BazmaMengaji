@@ -53,7 +53,7 @@ function AnimatedCounter({ value }: { value: string }) {
 export default function TentangContent() {
   const stats = [
     { icon: Users, value: '500+', label: 'Santri Aktif' },
-    { icon: GraduationCap, value: '15+', label: 'Asatidzah Berkompeten' },
+    { icon: GraduationCap, value: '15+', label: 'Guru Berkompeten' },
     { icon: Heart, value: '4.9', label: 'Rating Kepuasan' },
   ]
 

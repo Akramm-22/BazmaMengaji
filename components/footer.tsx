@@ -35,7 +35,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="max-w-sm text-sm text-muted-foreground leading-relaxed">
-              Platform bimbingan Al-Qur'an online terpercaya. Kami berkomitmen menghadirkan pembelajaran interaktif berkualitas tinggi yang fleksibel dari mana saja.
+              Platform bimbingan Al-Qur'an terpercaya. Kami berkomitmen menghadirkan pembelajaran interaktif berkualitas tinggi secara online maupun offline.
             </p>
           </div>
 
@@ -88,27 +88,27 @@ export function Footer() {
             </div>
             <div className="space-y-3 text-sm">
               <a
-                href="mailto:info@bazmamengaji.com"
+                href="mailto:ach21fauzi@gmail.com"
                 className="flex items-center gap-2.5 text-muted-foreground transition-colors duration-200 hover:text-primary group"
               >
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-secondary/50 border border-border/40 group-hover:border-primary/30">
                   <Mail className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary" />
                 </div>
-                <span className="truncate">info@bazmamengaji.com</span>
+                <span className="truncate">ach21fauzi@gmail.com</span>
               </a>
               
               <a
-                href="tel:+6287881234567"
+                href="tel:+6281515910511"
                 className="flex items-center gap-2.5 text-muted-foreground transition-colors duration-200 hover:text-primary group"
               >
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-secondary/50 border border-border/40 group-hover:border-primary/30">
                   <Phone className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary" />
                 </div>
-                <span>+62 878 8123 4567</span>
+                <span>0815-1591-0511</span>
               </a>
 
               <a
-                href="https://wa.me/6287881234567"
+                href="https://wa.me/6281515910511"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-muted-foreground transition-colors duration-200 hover:text-green-600 dark:hover:text-green-400 group"

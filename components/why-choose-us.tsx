@@ -68,7 +68,7 @@ export function WhyChooseUs() {
           Tempat Terbaik untuk Belajar Al-Quran
         </h2>
         <p className="mx-auto max-w-2xl text-sm md:text-base text-muted-foreground">
-          Berikut 6 alasan mengapa kami menjadi mitra terpercaya dalam menemani perjalanan spiritual dan interaksi Anda bersama Al-Quran.
+          Bazma Mengaji hadir untuk mendampingi setiap langkah perjalanan Anda dalam belajar, memahami, dan mengamalkan Al-Qur'an.
         </p>
       </motion.div>
 

@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { Toaster } from "@/components/ui/sonner";
 import './globals.css'
 
 const geistSans = Geist({ 
@@ -41,26 +42,21 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     images: [
       {
-        url: '/logo.jpg', // Update logo untuk OpenGraph
+        url: '/logo.jpg', 
         width: 1200,
         height: 630,
         alt: 'BAZMA Mengaji Logo',
       },
     ],
   },
+  // BERSIH TOTAL: Menghilangkan icon-light, icon-dark, dan apple-icon default bawaan template
   icons: {
     icon: [
-      { url: '/logo.jpg' }, // Menggunakan logo sebagai favicon utama jika diperlukan
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
+      { url: '/logo.jpg', type: 'image/jpeg' }, 
     ],
-    apple: '/apple-icon.png',
+    apple: [
+      { url: '/logo.jpg', type: 'image/jpeg' },
+    ],
   },
 }
 
@@ -75,7 +71,7 @@ export default function RootLayout({
     name: 'BAZMA Mengaji',
     description: 'Platform pembelajaran Al-Quran online terpercaya dengan metode berkualitas tinggi',
     url: 'https://bazmamengaji.com',
-    logo: 'https://bazmamengaji.com/logo.jpg', // Update logo di Schema SEO
+    logo: 'https://bazmamengaji.com/logo.jpg', 
     telephone: '+62-878-8123-4567',
     email: 'info@bazmamengaji.com',
     address: {
@@ -91,7 +87,7 @@ export default function RootLayout({
   return (
     <html 
       lang="id" 
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`} // Tambahkan scroll-smooth untuk UI yang lebih fluid
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`} 
       suppressHydrationWarning
     >
       <head>
@@ -102,15 +98,10 @@ export default function RootLayout({
         <link rel="canonical" href="https://bazmamengaji.com" />
       </head>
       <body className="font-sans antialiased bg-background text-foreground min-h-screen selection:bg-primary selection:text-primary-foreground">
-        {/* 
-          UI Update: 
-          1. selection:bg-primary -> Mengubah warna highlight teks saat di-select agar sesuai brand.
-          2. Antialiased ditingkatkan untuk rendering font yang lebih tajam.
-        */}
         <div className="relative flex min-h-screen flex-col">
           {children}
         </div>
-        
+        <Toaster />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

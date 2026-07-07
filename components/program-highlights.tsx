@@ -2,29 +2,33 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRight, BookOpen, Video } from 'lucide-react'
+import { ArrowRight, BookOpen, Video, MapPin } from 'lucide-react'
 
 export function ProgramHighlights() {
   const programs = [
     {
       name: 'Pra Tahsin',
       description: "Langkah awal belajar Al-Qur'an bagi yang belum mampu membaca, dari huruf hijaiyah hingga membaca dasar.",
-      price: 'Rp 150.000/bln',
+      price: 'Rp 250.000/bln',
+      type: 'both', // Tersedia Online & Offline
     },
     {
       name: 'Tahsin',
       description: 'Memperbaiki dan menyempurnakan bacaan sesuai makharijul huruf dan kaidah tajwid.',
       price: 'Rp 250.000/bln',
+      type: 'both', // Tersedia Online & Offline
     },
     {
       name: 'Tahfidz',
       description: "Pendampingan hafalan Al-Qur'an secara terstruktur dengan metode Mumtaza.",
       price: 'Rp 350.000/bln',
+      type: 'both', // Tersedia Online & Offline
     },
     {
       name: 'Tartil & Tajwid',
       description: 'Menyempurnakan teknik membaca dengan tartil dan penerapan hukum tajwid yang sempurna.',
-      price: 'Rp 200.000/bln',
+      price: 'Rp 250.000/bln',
+      type: 'both', // Tersedia Online & Offline
     },
   ]
 
@@ -34,8 +38,8 @@ export function ProgramHighlights() {
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 16 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   }
 
   return (
@@ -56,13 +60,13 @@ export function ProgramHighlights() {
           Pilih Program yang Sesuai dengan Kebutuhan Anda
         </h2>
         <p className="mx-auto max-w-xl text-sm md:text-base text-muted-foreground">
-          Temukan program bimbingan Al-Quran terbaik yang dirancang khusus untuk meningkatkan kemampuan Anda di setiap tingkatan.
+          Temukan program bimbingan Al-Qur'an terbaik yang dirancang untuk meningkatkan kemampuan membaca, memahami, dan mengamalkan Al-Qur'an.
         </p>
       </motion.div>
 
       {/* Grid Cards Program */}
       <motion.div
-        className="mx-auto mt-12 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4"
+        className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -72,7 +76,7 @@ export function ProgramHighlights() {
           <motion.div
             key={idx}
             variants={itemVariants}
-            className="group flex flex-col justify-between rounded-2xl border border-border/40 bg-card/60 p-5 md:p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-md hover:-translate-y-1"
+            className="group flex flex-col justify-between rounded-2xl border border-border/60 bg-card/70 p-5 md:p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1.5"
           >
             <div className="space-y-4">
               {/* Icon Container */}
@@ -81,21 +85,35 @@ export function ProgramHighlights() {
               </div>
               
               {/* Title & Description */}
-              <div className="space-y-1.5">
-                <h3 className="text-base md:text-lg font-bold text-foreground tracking-tight">{program.name}</h3>
-                <p className="text-xs md:text-sm leading-relaxed text-muted-foreground">
+              <div className="space-y-2">
+                <h3 className="text-base md:text-lg font-bold text-foreground tracking-tight group-hover:text-primary transition-colors duration-200">
+                  {program.name}
+                </h3>
+                <p className="text-xs md:text-sm leading-relaxed text-muted-foreground line-clamp-4">
                   {program.description}
                 </p>
               </div>
             </div>
 
             {/* Bottom Info Section */}
-            <div className="mt-5 pt-4 border-t border-border/30 space-y-2">
-              <span className="inline-flex items-center gap-1.5 rounded-md bg-primary/5 px-2 py-0.5 text-[11px] font-medium text-primary">
-                <Video className="h-3 w-3" />
-                Online via Zoom
-              </span>
-              <div className="flex items-baseline justify-between gap-1">
+            <div className="mt-6 pt-4 border-t border-border/40 space-y-3">
+              {/* Dynamic Badges based on type */}
+              <div className="flex flex-wrap gap-1.5">
+                {(program.type === 'online' || program.type === 'both') && (
+                  <span className="inline-flex items-center gap-1 rounded-md bg-sky-500/10 px-2 py-0.5 text-[10px] font-medium text-sky-600 dark:text-sky-400">
+                    <Video className="h-3 w-3" />
+                    Online
+                  </span>
+                )}
+                {(program.type === 'offline' || program.type === 'both') && (
+                  <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-600 dark:text-emerald-400">
+                    <MapPin className="h-3 w-3" />
+                    Offline
+                  </span>
+                )}
+              </div>
+
+              <div className="flex items-baseline justify-between gap-1 flex-wrap">
                 <span className="text-[11px] text-muted-foreground">Investasi Belajar:</span>
                 <span className="text-sm md:text-base font-bold text-primary">{program.price}</span>
               </div>

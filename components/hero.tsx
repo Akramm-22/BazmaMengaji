@@ -109,7 +109,7 @@ export function Hero() {
               </h1>
 
               <p className="max-w-xl text-base text-muted-foreground leading-relaxed md:text-lg">
-                Program pendidikan Al-Quran inklusif untuk seluruh kelompok usia bersama jajaran asatidzah berkompeten. Nikmati pengalaman belajar yang adaptif dan terukur.
+                Program pendidikan Al-Quran inklusif untuk seluruh kelompok usia bersama jajaran ustadz berkompeten. Nikmati pengalaman belajar yang adaptif dan terukur.
               </p>
             </div>
 

@@ -62,7 +62,7 @@ export function Testimonials() {
           Testimoni
         </span>
         <h2 className="text-3xl font-bold text-foreground md:text-4xl tracking-tight">
-          Cerita dari Santri & Wali Santri
+          Cerita Perjalanan Mengaji Bersama Bazma Mengaji
         </h2>
         <p className="mx-auto max-w-2xl text-sm md:text-base text-muted-foreground">
           Pengalaman nyata mereka yang telah belajar dan merasakan perubahan positif dalam perjalanan mengaji bersama kami.
