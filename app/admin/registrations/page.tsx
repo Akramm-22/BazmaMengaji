@@ -23,7 +23,7 @@ export default function AdminPage() {
   const [registrations, setRegistrations] = useState<Registration[]>([]);
 
   const fetchRegistrations = async () => {
-    const res = await fetch('http://localhost:5000/api/admin/registrations');
+    const res = await fetch('https://backend-ngaji.smktibazma.sch.id/api/admin/registrations');
     const result = await res.json();
 
     if (result.success) {
@@ -50,7 +50,7 @@ export default function AdminPage() {
   }, [router]);
 
   const approveRegistration = async (id: number) => {
-    const res = await fetch(`http://localhost:5000/api/admin/registrations/${id}/approve`, {
+    const res = await fetch(`https://backend-ngaji.smktibazma.sch.id/api/admin/registrations/${id}/approve`, {
       method: 'PUT',
     });
 
@@ -71,7 +71,7 @@ export default function AdminPage() {
   };
 
   const rejectRegistration = async (id: number) => {
-    const res = await fetch(`http://localhost:5000/api/admin/registrations/${id}/reject`, {
+    const res = await fetch(`https://backend-ngaji.smktibazma.sch.id/api/admin/registrations/${id}/reject`, {
       method: 'PUT',
     });
 

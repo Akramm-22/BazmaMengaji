@@ -24,7 +24,7 @@ export function Teachers() {
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/teachers');
+        const res = await fetch('https://backend-ngaji.smktibazma.sch.id/api/teachers');
         const result = await res.json();
 
         if (result.success) {

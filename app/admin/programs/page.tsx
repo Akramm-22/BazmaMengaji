@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 import { toast } from 'sonner'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://backend-ngaji.smktibazma.sch.id'
 
 type Program = {
   id: number

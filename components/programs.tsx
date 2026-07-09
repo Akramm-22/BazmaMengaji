@@ -24,7 +24,7 @@ export function Programs() {
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/programs');
+        const res = await fetch('https://backend-ngaji.smktibazma.sch.id/api/programs');
         const result = await res.json();
 
         if (result.success) {

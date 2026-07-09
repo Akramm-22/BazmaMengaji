@@ -40,7 +40,7 @@ function RegistrationFormContent() {
   const checkPhone = async (phone: string) => {
     if (!phone) return;
 
-    const res = await fetch(`http://localhost:5000/api/registrations/check-phone/${phone}`);
+    const res = await fetch(`https://backend-ngaji.smktibazma.sch.id/api/registrations/check-phone/${phone}`);
 
     const result = await res.json();
 
@@ -69,7 +69,7 @@ function RegistrationFormContent() {
       try {
         if (!programParam) return;
 
-        const programRes = await fetch(`http://localhost:5000/api/programs/${programParam}`);
+        const programRes = await fetch(`https://backend-ngaji.smktibazma.sch.id/api/programs/${programParam}`);
 
         const programResult = await programRes.json();
 
@@ -77,7 +77,7 @@ function RegistrationFormContent() {
           setSelectedProgram(programResult.data);
         }
 
-        const teacherRes = await fetch(`http://localhost:5000/api/teachers/program/${programParam}`);
+        const teacherRes = await fetch(`https://backend-ngaji.smktibazma.sch.id/api/teachers/program/${programParam}`);
 
         const teacherResult = await teacherRes.json();
 
@@ -108,7 +108,7 @@ function RegistrationFormContent() {
     try {
       setSubmitted(true);
 
-      const res = await fetch('http://localhost:5000/api/registrations', {
+      const res = await fetch('https://backend-ngaji.smktibazma.sch.id/api/registrations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

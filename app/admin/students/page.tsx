@@ -68,7 +68,7 @@ const openEditModal = (student: Student) => {
   }, []);
 
   const fetchStudents = async () => {
-    const res = await fetch('http://localhost:5000/api/admin/students');
+    const res = await fetch('https://backend-ngaji.smktibazma.sch.id/api/admin/students');
 
     const result = await res.json();
 
@@ -79,7 +79,7 @@ const openEditModal = (student: Student) => {
 
   const saveStudent = async () => {
   const res = await fetch(
-    `http://localhost:5000/api/admin/students/${editData.id}`,
+    `https://backend-ngaji.smktibazma.sch.id/api/admin/students/${editData.id}`,
     {
       method: 'PUT',
       headers: {

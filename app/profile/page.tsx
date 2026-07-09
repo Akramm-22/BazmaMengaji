@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 import { toast } from 'sonner'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://backend-ngaji.smktibazma.sch.id'
 
 export default function ProfilePage() {
   const router = useRouter()
